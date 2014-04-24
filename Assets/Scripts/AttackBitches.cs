@@ -42,7 +42,7 @@ public class AttackBitches : MonoBehaviour {
 	}
 
 	private void Attack(){
-		ZombieHealth zh = (ZombieHealth)target.GetComponent ("ZombieHealth");
+		EnemyHealthScript zh = (EnemyHealthScript)target.GetComponent ("EnemyHealthScript");
 		zh.AdjustCurrentHealth (-1);
 	}
 }
