@@ -5,11 +5,13 @@ public class PlayerHealth : MonoBehaviour {
 	public int maxHealth = 8;
 	int currentHealth;
 	Health healthguiScript;
+	PlayerScript pScript;
 
 	void Start(){
 		currentHealth = maxHealth;
 		GameObject health = GameObject.Find ("Health");
 		healthguiScript = (Health)health.GetComponent ("Health");
+		pScript = GetComponent<PlayerScript> ();
 	}
 
 	void Update (){
@@ -30,8 +32,18 @@ public class PlayerHealth : MonoBehaviour {
 
 		healthguiScript.modifyHealth (currentHealth);
 
-		if (currentHealth <= 0)
+		if (currentHealth <= 0) {
 			Debug.Log ("PLAYER DEAD");
+			pScript.enabled = false;
+			SpriteRenderer sprite = GetComponent<SpriteRenderer>();
+			BoxCollider2D hitbox = GetComponent<BoxCollider2D>();
+			
+			//enemy death anim (up and fall through ground)
+			rigidbody2D.AddForce(new Vector2(0f, 200f));
+			hitbox.isTrigger = true;
+			sprite.sortingOrder = 8;
+
+		}
 
 	}
 }	

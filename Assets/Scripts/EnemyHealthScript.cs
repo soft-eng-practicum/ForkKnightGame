@@ -9,8 +9,8 @@ public class EnemyHealthScript : MonoBehaviour {
 
 	public int maxHealth = 1;
 	public int pointWorth = 1;
-
-	private SpriteRenderer sprite;
+	public bool isDead;
+	
 	private GameObject score;
 	//private GameObject enemy;
 
@@ -19,6 +19,7 @@ public class EnemyHealthScript : MonoBehaviour {
 	void Start () {
 		score = GameObject.Find ("Score");
 		currentHealth = maxHealth;
+		isDead = false;
 	}
 
 	void Update () {
@@ -43,7 +44,8 @@ public class EnemyHealthScript : MonoBehaviour {
 			currentHealth = maxHealth;
 				
 		if (currentHealth <= 0) {
-			sprite = GetComponent<SpriteRenderer>();
+			isDead = true;
+			SpriteRenderer sprite = GetComponent<SpriteRenderer>();
 			BoxCollider2D hitbox = GetComponent<BoxCollider2D>();
 
 			//enemy death anim (up and fall through ground)

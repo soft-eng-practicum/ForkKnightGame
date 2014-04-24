@@ -2,28 +2,27 @@
 using System.Collections;
 
 public class PlayerScript : MonoBehaviour {
-	private GameObject weapon;
+
 	public float speed = 17f;
 	public float jumpForce = 9999f;
-	private float movement;	
 	public bool facingLeft = true;
 	public bool grounded = false;
 
-	// Use this for initialization
+	private float movement;	
+	private GameObject weapon;
+	
 	void Start () {
 		//weapon = GameObject.Find ("pitchfork");
 	}
-
-
-	// Update is called once per frame
+	
 	void Update () {
 		float inputX = Input.GetAxis ("Horizontal"); //left = -1, right = 1
 		
 		movement = speed * inputX;
 
-		if (Input.GetKeyDown(KeyCode.UpArrow)) {
-			Jump();
-		}
+		//if (Input.GetKeyDown(KeyCode.UpArrow)) {
+		//	Jump();
+		//}
 
 		if (inputX < 0 && !facingLeft)
 			Flip ();

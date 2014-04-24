@@ -5,27 +5,35 @@ public class ZombieAttack : MonoBehaviour {
 	public Transform target;
 	public int moveSpeed;
 	public int rotationSpeed;
-
 	public bool facingLeft = true;
 
-	public float spacing = 1.3f;
-
+	public float spacing = 1.1f;
 
 	private Transform myTransform;
 	private Transform weaponTransform;
+	private ZombieAttack script;
+
+	EnemyHealthScript deadCheck; 
+	bool isDead;
 
 	void Awake(){
 		myTransform = transform;
 	}
 
 	void Start(){
+		deadCheck = (EnemyHealthScript)gameObject.GetComponent ("EnemyHealthScript");
+		isDead = deadCheck.isDead;
 		GameObject go = GameObject.FindGameObjectWithTag("Player");
 		target = go.transform;
 		weaponTransform = transform.Find ("attackBox");
+		script = GetComponent<ZombieAttack> ();
 	}
 
 	void Update(){
 
+		isDead = deadCheck.isDead;
+		if (isDead)
+			script.enabled = !script.enabled;
 		//Debug.DrawLine(target.position, myTransform.position, Color.yellow);
 
 		//Look at Perry.
