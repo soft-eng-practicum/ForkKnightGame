@@ -1,26 +1,20 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 
 public class PlayerHealth : MonoBehaviour {
-	public int maxHealth = 100;
-	public int currentHealth = 100;
-	public float healthBarLength;
-	/*
-	public Vector2 screenPos = Camera.main.WorldToScreenPoint(gameObject.transform.position);
-	public float x = screenPos.position.x;
-	public float y = screenPos.position.y;*/
+	public int maxHealth = 8;
+	int currentHealth;
+	Health healthguiScript;
 
 	void Start(){
-		healthBarLength = Screen.width / 10;
+		currentHealth = maxHealth;
+		GameObject health = GameObject.Find ("Health");
+		healthguiScript = (Health)health.GetComponent ("Health");
 	}
 
 	void Update (){
-		AdjustCurrentHealth (0);
+
 	}
-	/*
-	void OnGUI(){
-		GUI.Box(new Rect(0,0, healthBarLength, 20), currentHealth + "/" + maxHealth);
-	}*/
 
 	public void AdjustCurrentHealth(int adj) {
 		currentHealth += adj;
@@ -34,7 +28,11 @@ public class PlayerHealth : MonoBehaviour {
 		if (maxHealth < 1)
 			 maxHealth = 1;
 
-		healthBarLength = (Screen.width / 10) * (currentHealth / (float)maxHealth);
+		healthguiScript.modifyHealth (currentHealth);
+
+		if (currentHealth <= 0)
+			Debug.Log ("PLAYER DEAD");
+
 	}
 }	
 	/*public float hp = 2f;

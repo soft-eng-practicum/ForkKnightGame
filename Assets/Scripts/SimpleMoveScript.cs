@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class ZombieMoveScript : MonoBehaviour {
+public class SimpleMoveScript : MonoBehaviour {
 	public Vector2 speed = new Vector2(5, 10);
 	
 	public Vector2 direction = new Vector2(-1, 0);

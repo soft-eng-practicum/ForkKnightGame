@@ -2,18 +2,16 @@
 using System.Collections;
 
 public class PlayerScript : MonoBehaviour {
-	private GameObject weaponID;
+	private GameObject weapon;
 	public float speed = 17f;
 	public float jumpForce = 9999f;
 	private float movement;	
 	public bool facingLeft = true;
 	public bool grounded = false;
 
-	//public Vector2 a = (0,9);
-
 	// Use this for initialization
 	void Start () {
-		
+		//weapon = GameObject.Find ("pitchfork");
 	}
 
 
