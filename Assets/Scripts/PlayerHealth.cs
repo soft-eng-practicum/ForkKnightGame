@@ -54,8 +54,7 @@ public class PlayerHealth : MonoBehaviour {
 
 			//reload level
 			
-
-			Application.LoadLevel(Application.loadedLevel);
+			//Application.LoadLevel(Application.loadedLevel);
 		}
 
 	}
