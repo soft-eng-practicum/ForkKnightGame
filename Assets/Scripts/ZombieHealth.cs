@@ -3,22 +3,24 @@ using System.Collections;
 
 public class ZombieHealth : MonoBehaviour {
 	public int x = 8;
-	public int maxHealth = 2;
-	public int currentHealth = 2;
+	public int maxHealth;
+	private int currentHealth;
 	public float healthBarLength;
 	private SpriteRenderer sprite;
+	public int enemyscore;
 	GameObject score;
 	
 	void Start(){
 		healthBarLength = Screen.width / 2;
 		score = GameObject.Find("Score");
+		currentHealth = maxHealth;
 	}
 	
 	void Update (){
 		if (transform.position.y < -5) {
 			Destroy (gameObject);
 			Score scoreScript = score.GetComponent<Score>();
-			scoreScript.score += 1;
+			scoreScript.score += enemyscore;
 		}
 	}
 	/*

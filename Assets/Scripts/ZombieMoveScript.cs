@@ -13,7 +13,7 @@ public class ZombieMoveScript : MonoBehaviour {
 		movement = new Vector2(
 			speed.x * direction.x,
 			speed.y * direction.y);
-		if (transform.position.x > 50)
+		if (transform.position.x > 70)
 			Destroy (gameObject);
 	}
 	
