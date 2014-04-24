@@ -124,6 +124,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 1
   pointWorth: 2
+  isDead: 0
 --- !u!114 &11400004
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -139,7 +140,7 @@ MonoBehaviour:
   moveSpeed: 12
   rotationSpeed: 0
   facingLeft: 1
-  spacing: 1.29999995
+  spacing: 2
 --- !u!212 &21200000
 SpriteRenderer:
   m_ObjectHideFlags: 1

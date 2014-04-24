@@ -7,12 +7,13 @@ public class PlayerScript : MonoBehaviour {
 	public float jumpForce = 9999f;
 	public bool facingLeft = true;
 	public bool grounded = false;
+	public GameObject weapon;
 
 	private float movement;	
-	private GameObject weapon;
+
 	
 	void Start () {
-		//weapon = GameObject.Find ("pitchfork");
+		weapon = GameObject.Find ("pitchfork");
 	}
 	
 	void Update () {

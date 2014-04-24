@@ -36,7 +36,7 @@ public class AttackMelee : MonoBehaviour {
 		}
 		else {
 			if(target.tag == "Player")
-				AttackPlayer();
+			{Debug.Log ("attackingplayer"); AttackPlayer();}
 		}
 	}
 

@@ -6,6 +6,8 @@ public class PlayerHealth : MonoBehaviour {
 	int currentHealth;
 	Health healthguiScript;
 	PlayerScript pScript;
+	Transform weapon;
+	Score score; 
 
 	void Start(){
 		currentHealth = maxHealth;
@@ -34,15 +36,26 @@ public class PlayerHealth : MonoBehaviour {
 
 		if (currentHealth <= 0) {
 			Debug.Log ("PLAYER DEAD");
+			score = GameObject.Find ("Score").GetComponent<Score>();
+			score.GOMsg = "GAME OVER\n";
+
 			pScript.enabled = false;
 			SpriteRenderer sprite = GetComponent<SpriteRenderer>();
 			BoxCollider2D hitbox = GetComponent<BoxCollider2D>();
-			
-			//enemy death anim (up and fall through ground)
-			rigidbody2D.AddForce(new Vector2(0f, 200f));
+			weapon = pScript.weapon.transform;
+			pScript.weapon.AddComponent("Rigidbody2D");
+			pScript.weapon.rigidbody2D.fixedAngle = true;
+			weapon.parent = null;
 			hitbox.isTrigger = true;
+
+			//enemy death anim (up and fall through ground)
+			rigidbody2D.AddForce(new Vector2(0f, 1200f));
 			sprite.sortingOrder = 8;
 
+			//reload level
+			
+
+			Application.LoadLevel(Application.loadedLevel);
 		}
 
 	}
@@ -81,16 +94,10 @@ public class PlayerHealth : MonoBehaviour {
 		
 		playerMovement.enabled = false;
 	}
-	
-	void LevelReset(){
-		
-		timer += Time.deltaTime;
-		
-		if (timer >= resetAfterDeathTime)
-			//fade out
-			print("Level reset");
+
+	void LevelReset(){		
 	}
-	
+
 	public void TakeDamage (float amount)
 	{
 		// Decrement the player's health by amount.
