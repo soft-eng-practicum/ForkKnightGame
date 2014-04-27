@@ -4,35 +4,49 @@ using System.Collections;
 public class PlayerScript : MonoBehaviour {
 
 	public float speed = 17f;
-	public float jumpForce = 9999f;
+	public float jumpForce = 1100f;
+	public bool jumpEnabled = true;
 	public bool facingLeft = true;
-	public bool grounded = false;
+	public bool isGrounded = false;
 	public GameObject weapon;
 
 	private float movement;	
+	public float moddedJumpForce;
+	private bool jumping = false;
+	private Transform groundCheck;
+	private Vector2 groundCheckPos;
+	private Vector2 playerPos;
 
-	
 	void Start () {
 		weapon = GameObject.Find ("pitchfork");
+		groundCheck = GameObject.Find ("groundCheck").transform;
+		moddedJumpForce = jumpForce;
 	}
 	
 	void Update () {
 		float inputX = Input.GetAxis ("Horizontal"); //left = -1, right = 1
-		
 		movement = speed * inputX;
 
-		//if (Input.GetKeyDown(KeyCode.UpArrow)) {
-		//	Jump();
-		//}
+		groundCheckPos = new Vector2 (groundCheck.position.x, groundCheck.position.y);
+		playerPos = new Vector2 (transform.position.x, transform.position.y);
+		isGrounded = Physics2D.Linecast(playerPos, groundCheckPos, 1 << LayerMask.NameToLayer("Ground"));
 
-		if (inputX < 0 && !facingLeft)
+		if (jumpEnabled)
+			if (Input.GetKeyDown(KeyCode.UpArrow) && isGrounded)
+				jumping = true;
+
+		if(jumping){
+			if (moddedJumpForce < -jumpForce && isGrounded){
+				jumping = false;
+				moddedJumpForce = jumpForce;
+			}
+		}
+			
+			if (inputX < 0 && !facingLeft)
 			Flip ();
 		if (inputX > 0 && facingLeft)
 			Flip ();
-	}
-
-	void Jump(){
-		rigidbody2D.AddForce(new Vector2(0f, 9999f));
+		//moveDirection.y -= movement.gravity * Time.deltaTime;
 	}
 
 	void Flip(){
@@ -40,11 +54,15 @@ public class PlayerScript : MonoBehaviour {
 		Vector2 theScale = transform.localScale;
 		theScale.x *= -1;
 		transform.localScale = theScale;
-		}
+	}
 
 	void FixedUpdate()
 	{
 		rigidbody2D.velocity = new Vector2 (movement, 0);
-		//grounded = Physics2D.OverlapCircle (groundCheck);
+
+		if (jumping) {
+			rigidbody2D.AddForce (new Vector2 (0f, moddedJumpForce));
+			moddedJumpForce -= 40;
+		}
 	}
 }

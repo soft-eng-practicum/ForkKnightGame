@@ -40,7 +40,7 @@ public class ZombieAttack : MonoBehaviour {
 		myTransform.rotation = Quaternion.Slerp (myTransform.rotation, Quaternion.LookRotation (target.position - myTransform.position), rotationSpeed * Time.deltaTime);
 
 		//Move towards Perry
-		if (target.position.x < myTransform.position.x) { 
+		if (target.position.x + .5 < myTransform.position.x) { 
 			myTransform.position -= myTransform.right * moveSpeed * Time.deltaTime; // player is left of enemy, move left
 			if(!facingLeft) Flip();
 		} 

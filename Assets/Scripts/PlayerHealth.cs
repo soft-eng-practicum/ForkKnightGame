@@ -47,9 +47,9 @@ public class PlayerHealth : MonoBehaviour {
 			pScript.weapon.rigidbody2D.fixedAngle = true;
 			weapon.parent = null;
 			hitbox.isTrigger = true;
-
+			rigidbody2D.gravityScale = 10;
 			//enemy death anim (up and fall through ground)
-			rigidbody2D.AddForce(new Vector2(0f, 1200f));
+			rigidbody2D.AddForce(new Vector2(0f, 800f));
 			sprite.sortingOrder = 8;
 
 			//reload level
