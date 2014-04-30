@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class AttackMelee : MonoBehaviour {
+public class AttackMelee : MonoBehaviour  {
 	//A melee attack script, usable by weaponless zombies and the standard pitchfork (after implementing tags)
 
 	public GameObject target;
@@ -17,6 +17,9 @@ public class AttackMelee : MonoBehaviour {
 
 	void Update () {
 		if (isPlayerAttack && Input.GetKeyUp (KeyCode.Space)) {
+			Attacking ();
+		}	
+		if (isPlayerAttack && Input.GetButtonUp ("Fire1")) {
 			Attacking ();
 		}	
 	}
