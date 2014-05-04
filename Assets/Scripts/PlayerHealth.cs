@@ -35,9 +35,10 @@ public class PlayerHealth : MonoBehaviour {
 		healthguiScript.modifyHealth (currentHealth);
 
 		if (currentHealth <= 0) {
-			Debug.Log ("PLAYER DEAD");
+			//Debug.Log ("PLAYER DEAD");
 			score = GameObject.Find ("Score").GetComponent<Score>();
 			score.GOMsg = "GAME OVER\n";
+			score.checkFinalScore();
 
             GameObject spawnerend = GameObject.Find("Spawners");
             Destroy(spawnerend);
@@ -55,7 +56,6 @@ public class PlayerHealth : MonoBehaviour {
 			sprite.sortingOrder = 8;
 
 			//reload level
-			
 			//Application.LoadLevel(Application.loadedLevel);
 		}
 
