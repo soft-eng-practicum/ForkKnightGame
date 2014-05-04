@@ -22,7 +22,7 @@ public class RestartGame : MonoBehaviour {
 			// Draw a button to start the game
 			if (GUI.Button(
 				// Center in X, 2/3 of the height in Y
-				new Rect(605, 475, buttonWidth, buttonHeight),
+				new Rect(605, 275, buttonWidth, buttonHeight),
 				""
 				))
 			{
