@@ -10,11 +10,22 @@ public class Score : MonoBehaviour
 		}
 
 
-	void Update ()
-	{
+	void Update ()	{
 		// Set the score text.
 		guiText.text = " " + GOMsg + score;
 
 	}
 
+	public void checkFinalScore(){
+		if (PlayerPrefs.HasKey ("Player Score")) {
+			if (PlayerPrefs.GetInt ("Player Score") < score){
+				PlayerPrefs.SetInt ("Player Score", score);
+				PlayerPrefs.Save();
+			}
+		}
+		else {
+			PlayerPrefs.SetInt ("Player Score", score);
+		}
+
+	}
 }
