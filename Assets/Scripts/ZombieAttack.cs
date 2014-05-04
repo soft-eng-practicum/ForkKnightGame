@@ -52,7 +52,6 @@ public class ZombieAttack : MonoBehaviour {
 		//Attack Perry
 		if (Mathf.Abs (weaponTransform.position.x - target.position.x) < spacing) {
 			//ref attack, call function
-			Debug.Log ("z attk");
 			AttackMelee myscript = gameObject.GetComponentInChildren<AttackMelee> ();
 			myscript.Attacking ();
 		}

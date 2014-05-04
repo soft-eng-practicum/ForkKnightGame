@@ -19,7 +19,10 @@ public class PlayerHealth : MonoBehaviour {
 	}
 
 	void Update (){
-
+		if (transform.position.y < -5) {
+			Debug.Log ("PLAYERDEAD");
+			Application.LoadLevel("GameOver");
+		}
 	}
 
 	public void AdjustCurrentHealth(int adj) {
