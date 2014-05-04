@@ -22,7 +22,7 @@ public class StartGame : MonoBehaviour {
 			// Draw a button to start the game
 			if (GUI.Button(
 				// Center in X, 2/3 of the height in Y
-				new Rect(600, 380, buttonWidth, buttonHeight),
+				new Rect(605, 275, buttonWidth, buttonHeight),
 				""
 				))
 			{

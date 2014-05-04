@@ -27,7 +27,7 @@ public class RestartGame : MonoBehaviour {
 				))
 			{
 				// On Click, load the first level.
-				Application.LoadLevel("Stage1"); // "Stage1" is the scene name
+				Application.LoadLevel("GameStart"); // "Stage1" is the scene name
 			}
 		}
 	}
