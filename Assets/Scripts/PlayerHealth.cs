@@ -39,6 +39,8 @@ public class PlayerHealth : MonoBehaviour {
 			score = GameObject.Find ("Score").GetComponent<Score>();
 			score.GOMsg = "GAME OVER\n";
 
+            GameObject spawnerend = GameObject.Find("Spawners");
+            Destroy(spawnerend);
 			pScript.enabled = false;
 			SpriteRenderer sprite = GetComponent<SpriteRenderer>();
 			BoxCollider2D hitbox = GetComponent<BoxCollider2D>();
