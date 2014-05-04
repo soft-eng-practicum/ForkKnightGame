@@ -8,6 +8,8 @@ public class PlayerHealth : MonoBehaviour {
 	PlayerScript pScript;
 	Transform weapon;
 	Score score; 
+	public AudioClip hurtSound;
+
 
 	void Start(){
 		currentHealth = maxHealth;
@@ -22,6 +24,7 @@ public class PlayerHealth : MonoBehaviour {
 
 	public void AdjustCurrentHealth(int adj) {
 		currentHealth += adj;
+		audio.PlayOneShot(hurtSound);
 
 		if (currentHealth < 1)
 			 currentHealth = 0;
@@ -38,6 +41,7 @@ public class PlayerHealth : MonoBehaviour {
 			//Debug.Log ("PLAYER DEAD");
 			score = GameObject.Find ("Score").GetComponent<Score>();
 			score.checkFinalScore();
+
 
             GameObject spawnerend = GameObject.Find("Spawners");
             Destroy(spawnerend);
