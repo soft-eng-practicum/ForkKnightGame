@@ -26,6 +26,6 @@ public class Score : MonoBehaviour
 		else {
 			PlayerPrefs.SetInt ("Player Score", score);
 		}
-
+		Debug.Log (PlayerPrefs.GetInt ("Player Score"));
 	}
 }

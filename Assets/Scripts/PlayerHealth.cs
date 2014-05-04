@@ -37,7 +37,6 @@ public class PlayerHealth : MonoBehaviour {
 		if (currentHealth <= 0) {
 			//Debug.Log ("PLAYER DEAD");
 			score = GameObject.Find ("Score").GetComponent<Score>();
-			score.GOMsg = "GAME OVER\n";
 			score.checkFinalScore();
 
             GameObject spawnerend = GameObject.Find("Spawners");
