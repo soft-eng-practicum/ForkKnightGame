@@ -10,6 +10,7 @@ public class EnemyHealthScript : MonoBehaviour {
 	public int maxHealth = 1;
 	public int pointWorth = 1;
 	public bool isDead;
+	public AudioClip enemyHurt;
 	
 	private GameObject score;
 	//private GameObject enemy;
@@ -33,7 +34,8 @@ public class EnemyHealthScript : MonoBehaviour {
 
 	public void AdjustCurrentHealth(int adj) {
 		currentHealth += adj;
-		
+		audio.PlayOneShot(enemyHurt);
+
 		if (maxHealth < 1)
 			maxHealth = 1;
 
