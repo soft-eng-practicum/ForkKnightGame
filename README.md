@@ -12,7 +12,6 @@ Android APK,
 Windows OS (optional, but this guide is for windows),
 and USB connection to OS
 
-
 A tutorial is as follows:
 
 1. The download links are as follows: http://code.google.com/android/intro/installing.html
@@ -21,3 +20,12 @@ A tutorial is as follows:
 4. This last step is easy. Open Command Prompt and type the following: adb install <1>/<2>.apk
 5. However, when you type the command, replace <1> with the path to your APK file and replace <2> with the name of the APK file. (In this case "AndroidTest.apk")
 6. You’re done! Your application is now ready for your use and enjoyment.
+
+USER DOCUMENTATION:
+
+This is the Android Version of the "Fork Knight Game" that was developed by a group of college students for their software engineering practicum.
+
+The game can be started by tapping the "Play" button at the bottom of the landing screen.
+"Perry", the main character, can move around by holding one of the arrow keys down found on either side of the screen. Perry can attack by double tapping the screen. It should be noted that perry cannot move and attack at the same time (That would take years of training :-p) so you should adjust your strategy accordingly.
+
+The goal of the game is the same as the Web version, survive for as long as possible and obtain the highest score. For the mobile version jumping has been disabled and there is no "Replay Button" implemented. To start a 'new' game, the user will have to exit the game manually by touching the 'home' key on their android device and also end the 'Active Application'. This is a barbaric way to end the mobile version and there will (hopefully) be a more robust option in the future.
