@@ -1,9 +1,10 @@
 Installation Instructions for running Game: 
 
 1. Make sure you are using the latest webplayer plugin from: http://unity3d.com/webplayer/ and that you are also using PC or Mac.
-2. Unzip File
-3. Open .html file in folder
-4. Game should open in your default browser or program
+2. Download ForkKnightWebFinal.zip file
+3. Unzip File
+4. Open .html file in folder
+5. Game should open in your default browser or program
 
 OR
 
