@@ -1,31 +1,11 @@
-{\rtf1\ansi\ansicpg1252\cocoartf1187\cocoasubrtf400
-{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
-{\colortbl;\red255\green255\blue255;\red52\green52\blue52;\red19\green74\blue104;}
-\margl1440\margr1440\vieww10800\viewh8400\viewkind0
-\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
+Installation Instructions: 
 
-\f0\b\fs24 \cf0 Installation Instructions: \
-\pard\pardeftab720
+1. Make sure you are using the latest webplayer plugin from: http://unity3d.com/webplayer/ and that you are also using PC or Mac.
+2. When building a Web Player, Unity automatically generates an HTML file next to the player data file. It contains the default HTML code to load the web player data file. Your HTML file is  "yourgame.html". Your player data is "yourgame.unity3d".
+3. Upload both .html and.unity3d files to your server
 
-\b0 \cf2 1. Make sure you are using the latest webplayer plugin from: {\field{\*\fldinst{HYPERLINK "http://unity3d.com/webplayer/"}}{\fldrslt \cf3 http://unity3d.com/webplayer/}}\cf3  \cf2  and that you are also using PC or Mac. \cf3 \
-\
-2.  \cf2 When building a 
-\b \cf2 Web Player
-\b0 \cf2 , Unity automatically generates an HTML file next to the player data file. It contains the default HTML code to load the web player data file. Your HTML file is  "yourgame.html". Your player data is "yourgame.unity3d".\
-\
-3. Upload both 
-\b \cf2 .html
-\b0 \cf2  and 
-\b \cf2 .unity3d
-\b0 \cf2  to your server\
-\
 *** You may have to change the directory of unity3d file with in the body of the html doc. So if you have uploaded your .unity3d file to 
-\b \cf2 files/themes/yourgame.unity3d
-\b0 \cf2  then change the directory in within the body of your html file.\
-\
+"files/themes/yourgame.unity3d" then change the directory in within the body of your html file.
+
 *** For more information about Unity Web Player, visit: 
-\b \cf2 http://docs.unity3d.com/Documentation/Manual/HTMLcodetoloadUnityWebPlayercontent.html
-\b0 \cf2 \
-\
-\
-}
+http://docs.unity3d.com/Documentation/Manual/HTMLcodetoloadUnityWebPlayercontent.html
