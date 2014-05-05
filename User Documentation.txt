@@ -1,4 +1,7 @@
-1. Go to your website
-2. Arrow Keys to Move, Spacebar to attack, Mouse-Click to interact with Buttons
-3. Kill as many zombies as possible
-4. Game Over Screen displays your current score as well as your High Score
+User Documentation:
+
+1. Open html file
+2. When file opens in your browser, put browser on FULLSCREEN
+3. Arrow Keys to Move, Spacebar to attack, Mouse-Click to interact with Buttons
+4. Kill as many zombies as possible
+5. Game Over Screen displays your current score as well as your High Score
