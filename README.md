@@ -5,7 +5,15 @@ ForkKnightGame
 -----------------------------
 An android version of the project has been created. It should work on most current android devices (tablets, phones, etc).
 
-To run the Android Version of the project you will need to have Android APK. A tutorial is as follows:
+To run the Android Version of the project you will need to have the following:
+
+An Android Device (Version 2.2 or Higher)
+Android APK
+Windows OS (optional, but this guide is for windows)
+USB connection to OS
+
+
+A tutorial is as follows:
 
 1. The download links are as follows: http://code.google.com/android/intro/installing.html
 2. http://dl.google.com/android/android_usb_windows.zip
