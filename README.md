@@ -1,8 +1,15 @@
 ForkKnightGame
 ==============
 
-Fork Knight is a 2D Medieval Horror/Survival game that  features Perry the Peasant as he braves an onslaught of the living dead with a pitchfork to take his farm back. Change! by Dave
-
-4/10/2014
+5/05/2014
 -----------------------------
-(I know that the README is not for the dev team but just this once:) Team, for now we just have the Assets Folder. You can build the scene from the demo by going to Assets>Scenes>Stage1. Later we'll follow the Pixelnes tutorial and do a real/safer/proper transfer to git.
+An android version of the project has been created. It should work on most current android devices (tablets, phones, etc).
+
+To run the Android Version of the project you will need to have Android APK. A tutorial is as follows:
+
+1. The download links are as follows: http://code.google.com/android/intro/installing.html
+2. http://dl.google.com/android/android_usb_windows.zip
+3. You need to modify your Android’s settings to allow the installation of applications from other sources. Under “Settings,” select “Application Settings” and then enable “Unknown Sources.” Also under “Settings,” select “SD Card” and “Phone Storage,” and finally enable “Disable Use for USB Storage”
+4. This last step is easy. Open Command Prompt and type the following: adb install <1>/<2>.apk
+5. However, when you type the command, replace <1> with the path to your APK file and replace <2> with the name of the APK file. (In this case "AndroidTest.apk")
+6. You’re done! Your application is now ready for your use and enjoyment.
