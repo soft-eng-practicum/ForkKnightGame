@@ -198,7 +198,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 2
-  pointWorth: 100
+  pointWorth: 15
   isDead: 0
   enemyHurt: {fileID: 8300000, guid: 0c257d9817c5a46a6b7d8757977c5c52, type: 3}
 --- !u!212 &21200000

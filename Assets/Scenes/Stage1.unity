@@ -359,7 +359,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18470c2baf178d546ae66fab6fa7aa5b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnTime: 4
+  spawnTime: 6
   spawnDelay: 10
   enemies:
   - {fileID: 100002, guid: 274c3e92d718a8442809958adb697842, type: 2}
@@ -725,6 +725,46 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_Sprite: {fileID: 21300000, guid: a61b8b3eb090def4ebc147f217235e2d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!1001 &436725098
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 658034209}
+    m_Modifications:
+    - target: {fileID: 400000, guid: 919341a9ecf5047b6be5049b81857284, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: .5
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 919341a9ecf5047b6be5049b81857284, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 919341a9ecf5047b6be5049b81857284, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 919341a9ecf5047b6be5049b81857284, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 919341a9ecf5047b6be5049b81857284, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 919341a9ecf5047b6be5049b81857284, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 919341a9ecf5047b6be5049b81857284, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 919341a9ecf5047b6be5049b81857284, type: 2}
+  m_RootGameObject: {fileID: 1136013167}
+  m_IsPrefabParent: 0
+  m_IsExploded: 1
 --- !u!1 &443138004
 GameObject:
   m_ObjectHideFlags: 0
@@ -793,7 +833,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18470c2baf178d546ae66fab6fa7aa5b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnTime: 3
+  spawnTime: 5
   spawnDelay: 0
   enemies:
   - {fileID: 100002, guid: 274c3e92d718a8442809958adb697842, type: 2}
@@ -1179,7 +1219,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: 69ed9a10de343504185997db8884a875, type: 2}
       propertyPath: spawnTime
-      value: 3
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 69ed9a10de343504185997db8884a875, type: 2}
       propertyPath: m_IsActive
@@ -1752,7 +1792,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 2
-  pointWorth: 100
+  pointWorth: 15
   isDead: 0
   enemyHurt: {fileID: 8300000, guid: 0c257d9817c5a46a6b7d8757977c5c52, type: 3}
 --- !u!1 &949121901
@@ -2103,8 +2143,8 @@ Prefab:
 --- !u!1 &1136013167
 GameObject:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
+  m_PrefabParentObject: {fileID: 100000, guid: 919341a9ecf5047b6be5049b81857284, type: 2}
+  m_PrefabInternal: {fileID: 436725098}
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1136013168}
@@ -2120,8 +2160,8 @@ GameObject:
 --- !u!4 &1136013168
 Transform:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
+  m_PrefabParentObject: {fileID: 400000, guid: 919341a9ecf5047b6be5049b81857284, type: 2}
+  m_PrefabInternal: {fileID: 436725098}
   m_GameObject: {fileID: 1136013167}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: .5, y: 1, z: 1}
@@ -2131,8 +2171,9 @@ Transform:
 --- !u!114 &1136013169
 MonoBehaviour:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
+  m_PrefabParentObject: {fileID: 11400000, guid: 919341a9ecf5047b6be5049b81857284,
+    type: 2}
+  m_PrefabInternal: {fileID: 436725098}
   m_GameObject: {fileID: 1136013167}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -2144,8 +2185,9 @@ MonoBehaviour:
 --- !u!132 &1136013170
 GUIText:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
+  m_PrefabParentObject: {fileID: 13200000, guid: 919341a9ecf5047b6be5049b81857284,
+    type: 2}
+  m_PrefabInternal: {fileID: 436725098}
   m_GameObject: {fileID: 1136013167}
   m_Enabled: 1
   serializedVersion: 3
@@ -3407,7 +3449,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: 69ed9a10de343504185997db8884a875, type: 2}
       propertyPath: spawnTime
-      value: 4
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 69ed9a10de343504185997db8884a875, type: 2}
       propertyPath: m_Name
