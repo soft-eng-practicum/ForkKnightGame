@@ -9,6 +9,7 @@ public class PlayerHealth : MonoBehaviour {
 	Transform weapon;
 	Score score; 
 
+
 	void Start(){
 		currentHealth = maxHealth;
 		GameObject health = GameObject.Find ("Health");
@@ -17,6 +18,7 @@ public class PlayerHealth : MonoBehaviour {
 	}
 
 	void Update (){
+		
 
 	}
 
@@ -52,9 +54,7 @@ public class PlayerHealth : MonoBehaviour {
 			rigidbody2D.AddForce(new Vector2(0f, 800f));
 			sprite.sortingOrder = 8;
 
-			//reload level
-			
-			//Application.LoadLevel(Application.loadedLevel);
+
 		}
 
 	}
