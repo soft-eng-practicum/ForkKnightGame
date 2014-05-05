@@ -7,10 +7,10 @@ An android version of the project has been created. It should work on most curre
 
 To run the Android Version of the project you will need to have the following:
 
-An Android Device (Version 2.2 or Higher)
-Android APK
-Windows OS (optional, but this guide is for windows)
-USB connection to OS
+An Android Device (Version 2.2 or Higher),
+Android APK,
+Windows OS (optional, but this guide is for windows),
+and USB connection to OS
 
 
 A tutorial is as follows:
