@@ -10,9 +10,9 @@ To run the Android Version of the project you will need to have the following:
 An Android Device (Version 2.2 or Higher),
 Android APK,
 Windows OS (optional, but this guide is for windows),
-and USB connection to OS
+and USB connection from the device to the Operating System.
 
-A tutorial is as follows:
+A tutorial to download and work with the Android APK is as follows:
 
 1. The download links are as follows: http://code.google.com/android/intro/installing.html
 2. http://dl.google.com/android/android_usb_windows.zip
@@ -25,7 +25,8 @@ USER DOCUMENTATION:
 
 This is the Android Version of the "Fork Knight Game" that was developed by a group of college students for their software engineering practicum.
 
-The game can be started by tapping the "Play" button at the bottom of the landing screen.
-"Perry", the main character, can move around by holding one of the arrow keys down found on either side of the screen. Perry can attack by double tapping the screen. It should be noted that perry cannot move and attack at the same time (That would take years of training :-p) so you should adjust your strategy accordingly.
+The game can be started by tapping the "Play" button at the bottom of the landing screen. Hitting the "Quit" button will end the process and return the user to their android device's screen."Perry", the main character, can move around by holding one of the arrow keys down found on either side of the screen. Perry can attack by double tapping the screen. It should be noted that perry cannot move and attack at the same time (That would take years of training :-p) so you should adjust your strategy accordingly.
 
-The goal of the game is the same as the Web version, survive for as long as possible and obtain the highest score. For the mobile version jumping has been disabled and there is no "Replay Button" implemented. To start a 'new' game, the user will have to exit the game manually by touching the 'home' key on their android device and also end the 'Active Application'. This is a barbaric way to end the mobile version and there will (hopefully) be a more robust option in the future.
+The goal of the game is the same as the Web version, survive for as long as possible and obtain the highest score. For the mobile version jumping has been disabled and there is no "Replay Button" implemented. To start a 'new' game, the user will have to exit the game manually by touching the 'home' key on their android device and also end the 'Active Application'. This is a barbaric way to end the mobile version but there will (hopefully) be a more robust option in the future.
+
+Thanks!
