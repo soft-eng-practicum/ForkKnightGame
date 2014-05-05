@@ -1598,7 +1598,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!82 &938941547
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1919,15 +1919,15 @@ Transform:
   m_LocalPosition: {x: 18.8778248, y: 3.20901275, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
+  - {fileID: 1870838036}
   - {fileID: 444773217}
   - {fileID: 913372511}
-  - {fileID: 1870838036}
+  - {fileID: 843513108}
   - {fileID: 1102560158}
   - {fileID: 40075320}
-  - {fileID: 843513108}
-  - {fileID: 257700731}
-  - {fileID: 298188171}
   - {fileID: 1155209603}
+  - {fileID: 298188171}
+  - {fileID: 257700731}
   m_Father: {fileID: 316833652}
 --- !u!1 &1044278295
 GameObject:
@@ -2253,7 +2253,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 100002, guid: 274c3e92d718a8442809958adb697842, type: 2}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 274c3e92d718a8442809958adb697842, type: 2}
@@ -2850,7 +2850,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 16
   jumpForce: 1200
-  jumpEnabled: 1
+  jumpEnabled: 0
   facingLeft: 1
   isGrounded: 0
   weapon: {fileID: 0}

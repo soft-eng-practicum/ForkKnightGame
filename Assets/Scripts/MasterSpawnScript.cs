@@ -11,7 +11,7 @@ public class MasterSpawnScript : MonoBehaviour {
     public int x;
     public int start; // starting point for spawner
     public int stoppage; // initially used to stop spawners, but now to cut off which spawners we want to use
-     
+	private int level = 0;
     // Use this for initialization
     void Start()
     {
@@ -23,10 +23,11 @@ public class MasterSpawnScript : MonoBehaviour {
 
     void Update()
     {
-        if (score.score >= x*100+100) //scores of 100
+        if (score.score >= (x*100)+100) //scores of 100
         {
-            start += count;
-            stoppage += count;
+			x = x + 5;
+			start += count;
+			stoppage += count;
             if (stoppage <= spawnprefab.Length) // prevent array out of bounds
                  InvokeRepeating("BeginSpawn", spawnDelay, spawnTime);
         }
@@ -34,10 +35,11 @@ public class MasterSpawnScript : MonoBehaviour {
 
     void BeginSpawn()
     {
+
         for(int i=start;i<stoppage;i++)
         {
             spawnprefab[i].GetComponent<SpawnerScript>().Start(); // spawn from start -> stoppage ( so 0 -2, then 2 -5, etc)
         }
-        x += 4 * x + 1;
+ 
     }
 }

@@ -175,7 +175,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c3f5f1a5fb6bf040b606646a4df05f8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  score: 152
+  score: 0
   GOMsg: 
 --- !u!4 &377095815
 Transform:
@@ -239,7 +239,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c3f5f1a5fb6bf040b606646a4df05f8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  score: 5
+  score: 0
   GOMsg: 
 --- !u!4 &611059799
 Transform:
@@ -483,7 +483,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c3f5f1a5fb6bf040b606646a4df05f8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  score: 0
+  score: 10
   GOMsg: 'Your Score:'
 --- !u!4 &1097139238
 Transform:
