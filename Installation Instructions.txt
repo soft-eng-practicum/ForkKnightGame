@@ -7,5 +7,10 @@ Installation Instructions:
 *** You may have to change the directory of unity3d file with in the body of the html doc. So if you have uploaded your .unity3d file to 
 "files/themes/yourgame.unity3d" then change the directory in within the body of your html file.
 
+OR
+
+1. Unzip File
+2. Open .html doc in folder
+
 *** For more information about Unity Web Player, visit: 
 http://docs.unity3d.com/Documentation/Manual/HTMLcodetoloadUnityWebPlayercontent.html
